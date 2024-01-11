@@ -1,0 +1,439 @@
+nohup: ignoring input
+multiprocess.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/zejun/.local/lib/python3.9/site-packages/multiprocess/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/zejun/.local/lib/python3.9/site-packages/multiprocess/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/zejun/.local/lib/python3.9/site-packages/pathos/helpers/mp_helper.py", line 15, in <lambda>
+    func = lambda args: f(*args)
+  File "/mnt/zejun/smp/code/test_case/get_test_case_acc_var_unpack_call_star_parallel.py", line 347, in get_each_repo_test_acc
+    if not check_the_repo_so_slow:
+UnboundLocalError: local variable 'check_the_repo_so_slow' referenced before assignment
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/zejun/smp/code/test_case/get_test_case_acc_var_unpack_call_star_parallel.py", line 412, in <module>
+    pool.map(get_each_repo_test_acc, repo_list)  # [:3]sample_repo_url ,token_num_list[:1]
+  File "/home/zejun/.local/lib/python3.9/site-packages/pathos/multiprocessing.py", line 139, in map
+    return _pool.map(star(f), zip(*args)) # chunksize
+  File "/home/zejun/.local/lib/python3.9/site-packages/multiprocess/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/zejun/.local/lib/python3.9/site-packages/multiprocess/pool.py", line 771, in get
+    raise self._value
+UnboundLocalError: local variable 'check_the_repo_so_slow' referenced before assignment
+come to the repo:  pyro.pkl
+come the file_html:  https://github.com/pyro-ppl/pyro/tree/master/examples/toy_mixture_model_discrete_enumeration.py
+come to the repo:  Detectron-Cascade-RCNN.pkl
+come the file_html:  https://github.com/zhaoweicai/Detectron-Cascade-RCNN/tree/master/detectron/core/test.py
+come to the repo:  asciimatics.pkl
+come the file_html:  https://github.com/peterbrittain/asciimatics/tree/master/samples/basics.py
+come to the repo:  arcade.pkl
+come the file_html:  https://github.com/pythonarcade/arcade/tree/master/arcade/texture.py
+come the file_html:  https://github.com/pythonarcade/arcade/tree/master/arcade/draw_commands.py
+come to the repo:  pyquil.pkl
+come the file_html:  https://github.com/rigetti/pyquil/tree/master/pyquil/quil.py
+come the file_html:  https://github.com/rigetti/pyquil/tree/master/pyquil/quantum_processor/transformers/qcs_isa_to_compiler_isa.py
+come to the repo:  mplfinance.pkl
+come the file_html:  https://github.com/matplotlib/mplfinance/tree/master/src/mplfinance/plotting.py
+come to the repo:  neon.pkl
+come the file_html:  https://github.com/NervanaSystems/neon/tree/master/neon/backends/math_cpu.py
+come the file_html:  https://github.com/NervanaSystems/neon/tree/master/examples/faster-rcnn/tests/anchor_target_layer_ref.py
+come the file_html:  https://github.com/NervanaSystems/neon/tree/master/examples/faster-rcnn/tests/proposal_layer_ref.py
+come to the repo:  oppia.pkl
+come the file_html:  https://github.com/oppia/oppia/tree/master/scripts/pre_push_hook.py
+come to the repo:  GFPGAN.pkl
+come the file_html:  https://github.com/TencentARC/GFPGAN/tree/master/gfpgan/data/ffhq_degradation_dataset.py
+come to the repo:  algotrading.pkl
+come the file_html:  https://github.com/ivopetiz/algotrading/tree/master/cryptoalgotrading/aux.py
+come to the repo:  disentanglement_lib.pkl
+come the file_html:  https://github.com/google-research/disentanglement_lib/tree/master/disentanglement_lib/visualize/dendrogram.py
+come to the repo:  channels-example.pkl
+come the file_html:  https://github.com/jacobian/channels-example/tree/master/chat/consumers.py
+come to the repo:  CrypTen.pkl
+come the file_html:  https://github.com/facebookresearch/CrypTen/tree/master/crypten/common/functions/pooling.py
+come to the repo:  dupeguru.pkl
+come the file_html:  https://github.com/arsenetar/dupeguru/tree/master/core/results.py
+come to the repo:  python-mingus.pkl
+come the file_html:  https://github.com/bspaans/python-mingus/tree/master/mingus/core/chords.py
+come to the repo:  sympy.pkl
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/polys/orthopolys.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/physics/quantum/density.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/matrices/sparsetools.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/sets/sets.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/tensor/array/arrayop.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/integrals/transforms.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/integrals/intpoly.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/integrals/risch.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/integrals/rubi/utility_function.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/integrals/rubi/parsetools/parse.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/algebras/quaternion.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/concrete/delta.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/logic/boolalg.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/simplify/hyperexpand.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/geometry/ellipse.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/geometry/util.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/geometry/parabola.py
+come the file_html:  https://github.com/sympy/sympy/tree/master/sympy/geometry/polygon.py
+come to the repo:  transform.pkl
+come the file_html:  https://github.com/tensorflow/transform/tree/master/tensorflow_transform/gaussianization.py
+come to the repo:  vispy.pkl
+come the file_html:  https://github.com/vispy/vispy/tree/master/vispy/gloo/wrappers.py
+come the file_html:  https://github.com/vispy/vispy/tree/master/vispy/geometry/generation.py
+come the file_html:  https://github.com/vispy/vispy/tree/master/vispy/geometry/triangulation.py
+come to the repo:  joinmarket-clientserver.pkl
+come the file_html:  https://github.com/JoinMarket-Org/joinmarket-clientserver/tree/master/jmclient/jmclient/support.py
+come the file_html:  https://github.com/JoinMarket-Org/joinmarket-clientserver/tree/master/jmclient/jmclient/fidelity_bond.py
+come the file_html:  https://github.com/JoinMarket-Org/joinmarket-clientserver/tree/master/jmclient/jmclient/schedule.py
+come to the repo:  DIG.pkl
+come the file_html:  https://github.com/divelab/DIG/tree/master/dig/sslgraph/method/contrastive/objectives/jse.py
+come the file_html:  https://github.com/divelab/DIG/tree/master/dig/sslgraph/method/contrastive/objectives/infonce.py
+come to the repo:  mmaction2.pkl
+come the file_html:  https://github.com/open-mmlab/mmaction2/tree/master/mmaction/localization/bsn_utils.py
+come to the repo:  django.pkl
+come the file_html:  https://github.com/django/django/tree/master/django/db/migrations/loader.py
+come to the repo:  nova.pkl
+come the file_html:  https://github.com/openstack/nova/tree/master/nova/compute/flavors.py
+come to the repo:  Kunlun-M.pkl
+come the file_html:  https://github.com/LoRexxar/Kunlun-M/tree/master/core/engine.py
+come to the repo:  ros_comm.pkl
+come the file_html:  https://github.com/ros/ros_comm/tree/master/tools/roslaunch/src/roslaunch/rlutil.py
+come the file_html:  https://github.com/ros/ros_comm/tree/master/clients/rospy/src/rospy/impl/tcpros_service.py
+come to the repo:  freqtrade.pkl
+come the file_html:  https://github.com/freqtrade/freqtrade/tree/master/freqtrade/configuration/timerange.py
+come to the repo:  thinc.pkl
+come the file_html:  https://github.com/explosion/thinc/tree/master/thinc/layers/with_array2d.py
+come to the repo:  alot.pkl
+come the file_html:  https://github.com/pazz/alot/tree/master/alot/settings/manager.py
+come to the repo:  natsort.pkl
+come the file_html:  https://github.com/SethMMorton/natsort/tree/master/natsort/__main__.py
+come to the repo:  subword-nmt.pkl
+come the file_html:  https://github.com/rsennrich/subword-nmt/tree/master//learn_bpe.py
+come the file_html:  https://github.com/rsennrich/subword-nmt/tree/master/subword_nmt/learn_bpe.py
+come to the repo:  auto_ml.pkl
+come the file_html:  https://github.com/ClimbsRocks/auto_ml/tree/master/auto_ml/predictor.py
+come to the repo:  terracotta.pkl
+come the file_html:  https://github.com/DHI-GRAS/terracotta/tree/master/terracotta/handlers/colormap.py
+come to the repo:  timesketch.pkl
+come the file_html:  https://github.com/google/timesketch/tree/master/timesketch/lib/utils.py
+come to the repo:  pythainlp.pkl
+come the file_html:  https://github.com/PyThaiNLP/pythainlp/tree/master/pythainlp/generate/core.py
+come to the repo:  avod.pkl
+come the file_html:  https://github.com/kujason/avod/tree/master/avod/core/models/rpn_model.py
+come to the repo:  detecto.pkl
+come the file_html:  https://github.com/alankbi/detecto/tree/master/detecto/visualize.py
+come to the repo:  mayavi.pkl
+come the file_html:  https://github.com/enthought/mayavi/tree/master/tvtk/util/ctf.py
+come to the repo:  keras-preprocessing.pkl
+come the file_html:  https://github.com/keras-team/keras-preprocessing/tree/master/keras_preprocessing/image/image_data_generator.py
+come the file_html:  https://github.com/keras-team/keras-preprocessing/tree/master/keras_preprocessing/image/affine_transformations.py
+come to the repo:  brian2.pkl
+come the file_html:  https://github.com/brian-team/brian2/tree/master/brian2/units/unitsafefunctions.py
+come to the repo:  angr.pkl
+come the file_html:  https://github.com/angr/angr/tree/master/angr/analyses/cfg_slice_to_sink/transitions.py
+come to the repo:  weblate.pkl
+come the file_html:  https://github.com/WeblateOrg/weblate/tree/master/weblate/accounts/captcha.py
+come to the repo:  scikit-image.pkl
+come the file_html:  https://github.com/scikit-image/scikit-image/tree/master/skimage/draw/_random_shapes.py
+come the file_html:  https://github.com/scikit-image/scikit-image/tree/master/skimage/transform/radon_transform.py
+come the file_html:  https://github.com/scikit-image/scikit-image/tree/master/skimage/filters/ridges.py
+come to the repo:  playwright-python.pkl
+come the file_html:  https://github.com/microsoft/playwright-python/tree/master/tests/conftest.py
+come to the repo:  deepvariant.pkl
+come the file_html:  https://github.com/google/deepvariant/tree/master/third_party/nucleus/util/vis.py
+come to the repo:  strawberryfields.pkl
+come the file_html:  https://github.com/XanaduAI/strawberryfields/tree/master/tests/frontend/compilers/conftest.py
+come the file_html:  https://github.com/XanaduAI/strawberryfields/tree/master/strawberryfields/apps/qchem/dynamics.py
+come to the repo:  pywt.pkl
+come the file_html:  https://github.com/PyWavelets/pywt/tree/master/pywt/_multilevel.py
+come to the repo:  integrations-core.pkl
+come the file_html:  https://github.com/DataDog/integrations-core/tree/master/elastic/datadog_checks/elastic/config.py
+come the file_html:  https://github.com/DataDog/integrations-core/tree/master/citrix_hypervisor/datadog_checks/citrix_hypervisor/metrics.py
+come to the repo:  bpython.pkl
+come the file_html:  https://github.com/bpython/bpython/tree/master/bpython/args.py
+come to the repo:  pylearn2.pkl
+come the file_html:  https://github.com/lisa-lab/pylearn2/tree/master/pylearn2/models/mlp.py
+come the file_html:  https://github.com/lisa-lab/pylearn2/tree/master/pylearn2/utils/image.py
+come to the repo:  Detectron.pkl
+come the file_html:  https://github.com/facebookresearch/Detectron/tree/master/detectron/core/test.py
+come to the repo:  PythonRobotics.pkl
+come the file_html:  https://github.com/AtsushiSakai/PythonRobotics/tree/master/PathPlanning/DStar/dstar.py
+come the file_html:  https://github.com/AtsushiSakai/PythonRobotics/tree/master/PathPlanning/DubinsPath/dubins_path_planning.py
+come the file_html:  https://github.com/AtsushiSakai/PythonRobotics/tree/master/PathPlanning/BezierPath/bezier_path.py
+come the file_html:  https://github.com/AtsushiSakai/PythonRobotics/tree/master/PathPlanning/DynamicWindowApproach/dynamic_window_approach.py
+come the file_html:  https://github.com/AtsushiSakai/PythonRobotics/tree/master/SLAM/EKFSLAM/ekf_slam.py
+come to the repo:  gradio.pkl
+come the file_html:  https://github.com/gradio-app/gradio/tree/master/gradio/inputs.py
+come to the repo:  detectron2.pkl
+come the file_html:  https://github.com/facebookresearch/detectron2/tree/master/detectron2/utils/visualizer.py
+come to the repo:  dask.pkl
+come the file_html:  https://github.com/dask/dask/tree/master/dask/array/routines.py
+come the file_html:  https://github.com/dask/dask/tree/master/dask/array/linalg.py
+come the file_html:  https://github.com/dask/dask/tree/master/dask/array/rechunk.py
+come to the repo:  ichnaea.pkl
+come the file_html:  https://github.com/mozilla/ichnaea/tree/master/ichnaea/api/locate/mac.py
+come to the repo:  talos.pkl
+come the file_html:  https://github.com/autonomio/talos/tree/master/talos/templates/pipelines.py
+come to the repo:  locust.pkl
+come the file_html:  https://github.com/locustio/locust/tree/master/locust/contrib/fasthttp.py
+come to the repo:  ScoutSuite.pkl
+come the file_html:  https://github.com/nccgroup/ScoutSuite/tree/master/ScoutSuite/core/fs.py
+come to the repo:  hummingbot.pkl
+come the file_html:  https://github.com/CoinAlpha/hummingbot/tree/master/hummingbot/connector/markets_recorder.py
+come to the repo:  python-telegram-bot.pkl
+come the file_html:  https://github.com/python-telegram-bot/python-telegram-bot/tree/master/telegram/bot.py
+come to the repo:  CenterNet2.pkl
+come the file_html:  https://github.com/xingyizhou/CenterNet2/tree/master/detectron2/utils/visualizer.py
+come to the repo:  MetPy.pkl
+come the file_html:  https://github.com/Unidata/MetPy/tree/master/src/metpy/io/metar.py
+come the file_html:  https://github.com/Unidata/MetPy/tree/master/src/metpy/interpolate/geometry.py
+come the file_html:  https://github.com/Unidata/MetPy/tree/master/src/metpy/interpolate/slices.py
+come the file_html:  https://github.com/Unidata/MetPy/tree/master/src/metpy/interpolate/points.py
+come to the repo:  KL-Loss.pkl
+come the file_html:  https://github.com/yihui-he/KL-Loss/tree/master/detectron/core/test.py
+come to the repo:  mbrl-lib.pkl
+come the file_html:  https://github.com/facebookresearch/mbrl-lib/tree/master/mbrl/util/replay_buffer.py
+come to the repo:  mne-python.pkl
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/filter.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/dipole.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/surface.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/io/meas_info.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/stats/parametric.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/minimum_norm/spatial_resolution.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/viz/misc.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/utils/numerics.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/preprocessing/artifact_detection.py
+come the file_html:  https://github.com/mne-tools/mne-python/tree/master/mne/preprocessing/nirs/_scalp_coupling_index.py
+come to the repo:  Kats.pkl
+come the file_html:  https://github.com/facebookresearch/Kats/tree/master/kats/detectors/cusum_detection.py
+come to the repo:  nni.pkl
+come the file_html:  https://github.com/microsoft/nni/tree/master/nni/algorithms/hpo/hyperopt_tuner.py
+come the file_html:  https://github.com/microsoft/nni/tree/master/nni/algorithms/hpo/curvefitting_assessor/model_factory.py
+come to the repo:  nanodet.pkl
+come the file_html:  https://github.com/RangiLyu/nanodet/tree/master/nanodet/data/transform/warp.py
+come to the repo:  socorro.pkl
+come the file_html:  https://github.com/mozilla-services/socorro/tree/master/socorro/lib/external_common.py
+come to the repo:  espresso.pkl
+come the file_html:  https://github.com/freewym/espresso/tree/master/fairseq/data/dictionary.py
+come to the repo:  alibi-detect.pkl
+come the file_html:  https://github.com/SeldonIO/alibi-detect/tree/master/alibi_detect/od/mahalanobis.py
+come the file_html:  https://github.com/SeldonIO/alibi-detect/tree/master/alibi_detect/utils/perturbation.py
+come to the repo:  Mage2Gen.pkl
+come the file_html:  https://github.com/Mage2Gen/Mage2Gen/tree/master/mage2gen/snippets/plugin.py
+come to the repo:  mitmproxy.pkl
+come the file_html:  https://github.com/mitmproxy/mitmproxy/tree/master/mitmproxy/utils/human.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['test/mitmproxy/utils/test_human.py::test_format_address'] ['test.mitmproxy.utils.test_human.test_format_address'] 1
+come to the repo:  textflint.pkl
+come the file_html:  https://github.com/textflint/textflint/tree/master/textflint/input/component/sample/re_sample.py
+come to the repo:  colour.pkl
+come the file_html:  https://github.com/colour-science/colour/tree/master/colour/io/luts/lut.py
+come the file_html:  https://github.com/colour-science/colour/tree/master/colour/plotting/corresponding.py
+come the file_html:  https://github.com/colour-science/colour/tree/master/colour/plotting/diagrams.py
+come the file_html:  https://github.com/colour-science/colour/tree/master/colour/plotting/common.py
+come the file_html:  https://github.com/colour-science/colour/tree/master/colour/plotting/temperature.py
+come the file_html:  https://github.com/colour-science/colour/tree/master/colour/recovery/otsu2018.py
+come to the repo:  tf-quant-finance.pkl
+come the file_html:  https://github.com/google/tf-quant-finance/tree/master/tf_quant_finance/datetime/date_tensor.py
+come to the repo:  qiskit-terra.pkl
+come the file_html:  https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/test/reference_circuits.py
+come the file_html:  https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/pulse/schedule.py
+come the file_html:  https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/quantum_info/operators/symplectic/clifford_circuits.py
+come the file_html:  https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/circuit/qpy_serialization.py
+come the file_html:  https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/transpiler/synthesis/graysynth.py
+come to the repo:  meshio.pkl
+come the file_html:  https://github.com/nschloe/meshio/tree/master/src/meshio/ply/_ply.py
+come to the repo:  BERT-keras.pkl
+come the file_html:  https://github.com/Separius/BERT-keras/tree/master/transformer/train.py
+come to the repo:  chalice.pkl
+come the file_html:  https://github.com/aws/chalice/tree/master/chalice/awsclient.py
+come to the repo:  rtv.pkl
+come the file_html:  https://github.com/michael-lazar/rtv/tree/master/rtv/theme.py
+come to the repo:  restless.pkl
+come the file_html:  https://github.com/toastdriven/restless/tree/master/restless/utils.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/test_utils.py::FormatTracebackTestCase::test_format_traceback'] ['tests.test_utils.FormatTracebackTestCase.test_format_traceback'] 1
+come to the repo:  gmplot.pkl
+come the file_html:  https://github.com/gmplot/gmplot/tree/master/gmplot/google_map_plotter.py
+come to the repo:  amundsen.pkl
+come the file_html:  https://github.com/amundsen-io/amundsen/tree/master/databuilder/databuilder/loader/file_system_neptune_csv_loader.py
+come the file_html:  https://github.com/amundsen-io/amundsen/tree/master/databuilder/databuilder/transformer/regex_str_replace_transformer.py
+come to the repo:  nengo.pkl
+come the file_html:  https://github.com/nengo/nengo/tree/master/nengo/utils/filter_design.py
+come the file_html:  https://github.com/nengo/nengo/tree/master/nengo/utils/ensemble.py
+come to the repo:  budoux.pkl
+come the file_html:  https://github.com/google/budoux/tree/master/budoux/parser.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/test_parser.py::TestParser::test_parse'] [] 0
+come the file_html:  https://github.com/google/budoux/tree/master/budoux/feature_extractor.py
+come to the repo:  Flask-MonitoringDashboard.pkl
+come the file_html:  https://github.com/flask-dashboard/Flask-MonitoringDashboard/tree/master/flask_monitoringdashboard/core/colors.py
+come to the repo:  pyowm.pkl
+come the file_html:  https://github.com/csparpa/pyowm/tree/master/pyowm/agroapi10/polygon.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/unit/agroapi10/test_polygon.py::TestPolygon::test_from_dict'] ['tests.unit.agroapi10.test_polygon.TestPolygon.test_from_dict'] 1
+come to the repo:  DeepMatch.pkl
+come the file_html:  https://github.com/shenweichen/DeepMatch/tree/master/deepmatch/models/sdm.py
+come to the repo:  toolkit.pkl
+come the file_html:  https://github.com/got-10k/toolkit/tree/master/got10k/utils/metrics.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/test_utils.py::TestUtils::test_iou'] ['tests.test_utils.TestUtils.test_iou'] 1
+come to the repo:  kazoo.pkl
+come the file_html:  https://github.com/python-zk/kazoo/tree/master/kazoo/recipe/lock.py
+come the file_html:  https://github.com/python-zk/kazoo/tree/master/kazoo/handlers/utils.py
+come to the repo:  opytimizer.pkl
+come the file_html:  https://github.com/gugarosa/opytimizer/tree/master/opytimizer/visualization/surface.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/opytimizer/visualization/test_surface.py::test_convergence_plot'] ['tests.opytimizer.visualization.test_surface.test_convergence_plot'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/opytimizer/visualization/test_surface.py::test_convergence_plot'] ['tests.opytimizer.visualization.test_surface.test_convergence_plot'] 1
+come to the repo:  jittor.pkl
+come the file_html:  https://github.com/Jittor/jittor/tree/master/python/jittor/nn.py
+come to the repo:  pyswarms.pkl
+come the file_html:  https://github.com/ljvmiranda921/pyswarms/tree/master/pyswarms/utils/plotters/plotters.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/utils/plotters/test_plotters.py::test_plot_contour_return_type'] ['tests.utils.plotters.test_plotters.test_plot_contour_return_type'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/utils/plotters/test_plotters.py::test_plot_surface_return_type'] ['tests.utils.plotters.test_plotters.test_plot_surface_return_type'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/utils/plotters/test_plotters.py::test_parallel_mesh'] ['tests.utils.plotters.test_plotters.test_parallel_mesh'] 1
+>>>>>>>>>>dict_me_re:  ['tests/utils/plotters/test_plotters.py::test_mesh_hidden_function_shape'] ['tests.utils.plotters.test_plotters.test_mesh_hidden_function_shape'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/utils/plotters/test_plotters.py::test_parallel_mesh'] ['tests.utils.plotters.test_plotters.test_parallel_mesh'] 1
+>>>>>>>>>>dict_me_re:  ['tests/utils/plotters/test_plotters.py::test_mesh_hidden_function_shape'] ['tests.utils.plotters.test_plotters.test_mesh_hidden_function_shape'] 1
+come to the repo:  m2cgen.pkl
+come the file_html:  https://github.com/BayesWitnesses/m2cgen/tree/master/m2cgen/assemblers/utils.py
+come to the repo:  yellowbrick.pkl
+come the file_html:  https://github.com/DistrictDataLabs/yellowbrick/tree/master/yellowbrick/utils/kneed.py
+come to the repo:  metrics.pkl
+come the file_html:  https://github.com/PyTorchLightning/metrics/tree/master/torchmetrics/utilities/checks.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/classification/test_inputs.py::test_threshold'] ['tests.classification.test_inputs.test_threshold'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/classification/test_inputs.py::test_threshold'] ['tests.classification.test_inputs.test_threshold'] 1
+come to the repo:  EmoPy.pkl
+come the file_html:  https://github.com/thoughtworksarts/EmoPy/tree/master/EmoPy/library/image.py
+come to the repo:  pygorithm.pkl
+come the file_html:  https://github.com/OmkarPathak/pygorithm/tree/master/pygorithm/geometry/rect2.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_false'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_coll_findmtv_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_coll_findmtv_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_coll_findmtv_false'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_false'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_coll_findmtv_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_coll_findmtv_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_coll_findmtv_false'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_false'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_coll_findmtv_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_coll_findmtv_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_edge'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_edge'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_poly_rect_mtv'] ['tests.test_geometry.TestRect2.test_find_intersection_poly_rect_mtv'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_rect_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_rect_false'] 1
+>>>>>>>>>>dict_me_re:  ['tests/test_geometry.py::TestRect2::test_find_intersection_rect_poly_coll_findmtv_false'] ['tests.test_geometry.TestRect2.test_find_intersection_rect_poly_coll_findmtv_false'] 1
+come to the repo:  federated.pkl
+come the file_html:  https://github.com/tensorflow/federated/tree/master/tensorflow_federated/python/core/impl/types/computation_types.py
+come the file_html:  https://github.com/tensorflow/federated/tree/master/tensorflow_federated/python/core/impl/compiler/tree_transformations.py
+come the file_html:  https://github.com/tensorflow/federated/tree/master/tensorflow_federated/python/core/impl/compiler/tensorflow_computation_factory.py
+come to the repo:  cupy.pkl
+come the file_html:  https://github.com/cupy/cupy/tree/master/cupy/cusparse.py
+come to the repo:  pingouin.pkl
+come the file_html:  https://github.com/raphaelvallat/pingouin/tree/master/pingouin/plotting.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['pingouin/tests/test_plotting.py::TestPlotting::test_plot_blandaltman'] ['pingouin.tests.test_plotting.TestPlotting.test_plot_blandaltman'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['pingouin/tests/test_plotting.py::TestPlotting::test_plot_blandaltman'] ['pingouin.tests.test_plotting.TestPlotting.test_plot_blandaltman'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['pingouin/tests/test_plotting.py::TestPlotting::test_plot_blandaltman'] ['pingouin.tests.test_plotting.TestPlotting.test_plot_blandaltman'] 1
+come to the repo:  AmpliGraph.pkl
+come the file_html:  https://github.com/Accenture/AmpliGraph/tree/master/ampligraph/discovery/discovery.py
+come to the repo:  gitfs.pkl
+come the file_html:  https://github.com/presslabs/gitfs/tree/master/gitfs/repository.py
+come the file_html:  https://github.com/presslabs/gitfs/tree/master/gitfs/utils/strptime.py
+come to the repo:  routersploit.pkl
+come the file_html:  https://github.com/threat9/routersploit/tree/master/routersploit/modules/exploits/routers/technicolor/tg784_authbypass.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/3com/test_3com_ftp_default_creds.py::test_check_success'] ['tests.creds.routers.3com.test_3com_ftp_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/3com/test_3com_telnet_default_creds.py::test_check_success'] ['tests.creds.routers.3com.test_3com_telnet_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/2wire/test_ftp_default_creds.py::test_check_success'] ['tests.creds.routers.2wire.test_ftp_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/shuttle/test_915wm_dns_change.py::test_check_success'] ['tests.exploits.routers.shuttle.test_915wm_dns_change.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/2wire/test_telnet_default_creds.py::test_check_success'] ['tests.creds.routers.2wire.test_telnet_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/3com/test_officeconnect_rce.py::test_check_success'] ['tests.exploits.routers.3com.test_officeconnect_rce.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/3com/test_3com_ssh_default_creds.py::test_check_success'] ['tests.creds.routers.3com.test_3com_ssh_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/technicolor/test_tg784_authbypass.py::test_check_success'] ['tests.exploits.routers.technicolor.test_tg784_authbypass.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/2wire/test_ssh_default_creds.py::test_check_success'] ['tests.creds.routers.2wire.test_ssh_default_creds.test_check_success'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/3com/test_3com_ftp_default_creds.py::test_check_success'] ['tests.creds.routers.3com.test_3com_ftp_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/3com/test_3com_telnet_default_creds.py::test_check_success'] ['tests.creds.routers.3com.test_3com_telnet_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/2wire/test_ftp_default_creds.py::test_check_success'] ['tests.creds.routers.2wire.test_ftp_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/shuttle/test_915wm_dns_change.py::test_check_success'] ['tests.exploits.routers.shuttle.test_915wm_dns_change.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/2wire/test_telnet_default_creds.py::test_check_success'] ['tests.creds.routers.2wire.test_telnet_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/3com/test_officeconnect_rce.py::test_check_success'] ['tests.exploits.routers.3com.test_officeconnect_rce.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/3com/test_3com_ssh_default_creds.py::test_check_success'] ['tests.creds.routers.3com.test_3com_ssh_default_creds.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/technicolor/test_tg784_authbypass.py::test_check_success'] ['tests.exploits.routers.technicolor.test_tg784_authbypass.test_check_success'] 1
+>>>>>>>>>>dict_me_re:  ['tests/creds/routers/2wire/test_ssh_default_creds.py::test_check_success'] ['tests.creds.routers.2wire.test_ssh_default_creds.test_check_success'] 1
+come the file_html:  https://github.com/threat9/routersploit/tree/master/routersploit/modules/exploits/routers/billion/billion_5200w_rce.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['tests/exploits/routers/billion/test_billion_5200w_rce.py::test_check_success'] ['tests.exploits.routers.billion.test_billion_5200w_rce.test_check_success'] 1
+come to the repo:  RedditDownloader.pkl
+come the file_html:  https://github.com/shadowmoose/RedditDownloader/tree/master/redditdownloader/processing/handlers/tumblr.py
+come to the repo:  OpenFermion.pkl
+come the file_html:  https://github.com/quantumlib/OpenFermion/tree/master/src/openfermion/circuits/trotter_exp_to_qgates.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/circuits/trotter_exp_to_qgates_test.py::TrottQasmTest::test_exceptions'] ['src.openfermion.circuits.trotter_exp_to_qgates_test.TrottQasmTest.test_exceptions'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/circuits/trotter_exp_to_qgates_test.py::TrottQasmTest::test_exceptions'] ['src.openfermion.circuits.trotter_exp_to_qgates_test.TrottQasmTest.test_exceptions'] 1
+come the file_html:  https://github.com/quantumlib/OpenFermion/tree/master/src/openfermion/measurements/qubit_partitioning.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_zero_counting'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_zero_counting'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_exception'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_exception'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_partitioning_odd'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_partitioning_odd'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_partition_size_odd'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_partition_size_odd'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_partition_of_two'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_partition_of_two'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_num_partitions'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_num_partitions'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_partitioning'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_partitioning'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/measurements/qubit_partitioning_test.py::BinaryPartitionIteratorTest::test_partition_size'] ['src.openfermion.measurements.qubit_partitioning_test.BinaryPartitionIteratorTest.test_partition_size'] 1
+come the file_html:  https://github.com/quantumlib/OpenFermion/tree/master/src/openfermion/linalg/sparse_tools.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_multi_mode'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_multi_mode'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_addition'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_addition'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_trunc'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_trunc'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_invalid_op'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_invalid_op'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_number'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_number'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_empty'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_empty'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_single'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_single'] 1
+>>>>>>>>>>dict_me_re:  ['src/openfermion/linalg/sparse_tools_test.py::BosonSparseTest::test_boson_operator_sparse_identity'] ['src.openfermion.linalg.sparse_tools_test.BosonSparseTest.test_boson_operator_sparse_identity'] 1
+come the file_html:  https://github.com/quantumlib/OpenFermion/tree/master/src/openfermion/transforms/opconversions/bksf.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/transforms/opconversions/bksf_test.py::bravyi_kitaev_fastTransformTest::test_bravyi_kitaev_fast_generate_fermions'] [] 0
+come the file_html:  https://github.com/quantumlib/OpenFermion/tree/master/src/openfermion/chem/molecular_data.py
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/chem/molecular_data_test.py::MolecularDataTest::test_name_molecule'] ['src.openfermion.chem.molecular_data_test.MolecularDataTest.test_name_molecule'] 1
+whether code same:  False
+>>>>>>>>>>dict_me_re:  ['src/openfermion/chem/molecular_data_test.py::MolecularDataTest::test_name_molecule'] ['src.openfermion.chem.molecular_data_test.MolecularDataTest.test_name_molecule'] 1

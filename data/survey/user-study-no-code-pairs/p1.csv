@@ -1,0 +1,191 @@
+1,"for i in range(0, len(minibatch)):
+                terminal = minibatch[i][4]
+                # if terminal, only equals reward
+                if terminal:
+                    y_batch.append(r_batch[i])
+                else:
+                    y_batch.append(r_batch[i] + GAMMA * np.max(readout_j1_batch[i]))","y_batch = [r_batch[i] if minbatch[i][4] else r_batch[i] + GAMMA * np.max(readout_j1_batch[i]) for i in range(0, len(minibatch))]"
+2,"for uv_set in settings.selection_uv_loops:
+	for loop in bm.faces[uv_set[0]].loops:
+		if loop.vert.index == uv_set[1]:
+			loop[uv_layers].select = True
+			break","for uv_set_0, uv_set_1, *rest in settings.selection_uv_loops:
+	for loop in bm.faces[uv_set_0.loops:
+		if loop.vert.index == uv_set_1:
+			loop[uv_layers].select = True
+			break"
+3,if G_ego.number_of_nodes() >= 50 and (G_ego.number_of_nodes() <= 400):,if 50 <= G_ego.number_of_nodes() <= 400:
+3,if (G_ego.number_of_nodes() >= 4) and (G_ego.number_of_nodes() <= 20):,if 4 <=  and G_ego.number_of_nodes() <= 20:
+4,"for parent in resource_hierarchy.keys():
+                    is_root = True
+                    for children in resource_hierarchy.values():
+                        if parent in children:
+                            is_root = False
+                            break
+                    if is_root:
+                        root = parent","for parent in resource_hierarchy.keys():
+                    is_root = True
+                    for children in resource_hierarchy.values():
+                        if parent in children:
+                            is_root = False
+                            break
+                    if is_root:
+                        root = parent
+                else:
+                	root = None"
+5,"for user in privileged_users:
+        manager = user[""managers_group__user""]
+        last_login = user[""managers_group__user__last_login""]
+
+        if last_login:
+            if last_login + relativedelta(months=months) > start_of_today:
+                active_managers.add(manager)",active_managers = {user["managers_group__user"] if (user["managers_group__user__last_login"] and (user["managers_group__user__last_login"]+relativedelta(months=months) > start_of_today)) for user in privileged_users}
+5,,
+6,,
+7,"self.full_csv_path = """"
+        self.dir = """"
+        self.filename = """"",self.full_csv_path = self.dir = self.filename = ""
+7,"self.csv = None
+        self.bokeh_source = None
+        self.bokeh_source_orig = None
+        self.last_modified = None",self.csv = self.bokeh_source = self.bokeh_source_orig = self.last_modified = None
+7,"self.separate_files = False
+        self.last_reload_data_fix = False",self.separate_files = self.last_reload_data_fix = False
+8,"for row in subdomains:
+                content += ""<tr><td>{}</td><td>{}</td><td>{}</td></tr>"".format(row[0],row[1],row[2])","for a,b,c in subdomains:
+    content += ""<tr><td>{}</td><td>{}</td><td>{}</td></tr>"".format(a,b,c)"
+8,"for row in takeovers:
+                    content += ""<tr><td>{}</td><td>{}</td><td>{}</td></tr>"".format(row[0],row[1],row[2])","for a,b,c in takeovers:
+                    content += ""<tr><td>{}</td><td>{}</td><td>{}</td></tr>"".format(a,b,c)"
+8,"for row in frontable:
+                    content += ""<tr><td>{}</td><td>{}</td><td>{}</td></tr>"".format(row[0],row[1],row[2])","for a,b,c in frontable:
+                    content += ""<tr><td>{}</td><td>{}</td><td>{}</td></tr>"".format(a,b,c)"
+9,"while start < len(chars):
+        end = len(chars)
+        cur_substr = None
+        while start < end:
+          substr = """".join(chars[start:end])
+          if start > 0:
+            substr = ""##"" + six.ensure_str(substr)
+          if substr in self.vocab:
+            cur_substr = substr
+            break
+          end -= 1
+        if cur_substr is None:
+          is_bad = True
+          break
+        sub_tokens.append(cur_substr)
+        start = end","for token in whitespace_tokenize(text):
+      chars = list(token)
+      if len(chars) > self.max_input_chars_per_word:
+        output_tokens.append(self.unk_token)
+        continue"
+10,"img_id = img_a.view(-1, img_a.shape[0], img_a.shape[1], img_a.shape[2])","img_id = img_a.view(-1, *img_a.shape[0:3])"
+10,"specific_person = specific_person.view(-1, specific_person.shape[0], specific_person.shape[1], specific_person.shape[2])","specific_person = specific_person.view(-1, *specific_person.shape[:3])"
+11,"for item in graph.operation_history:
+            if item[0] == ""to_deeper_model"":
+                operation_history.append(
+                    [
+                        item[0],
+                        item[1],
+                        layer_description_extractor(item[2], graph.node_to_id),
+                    ]
+                )
+            else:
+                operation_history.append(item)","operation_history = [[
+                        item[0],
+                        item[1],
+                        layer_description_extractor(item[2], graph.node_to_id),
+                    ] if item[0] == ""to_deeper_model"" else item for item in graph.operation_history]"
+11,"for node in graph.node_list:
+            node_id = graph.node_to_id[node]
+            node_information = node.shape
+            node_list.append((node_id, node_information))","node_list = [(graph.node_to_id[node], node.shape) for node in graph.node_List]"
+11,"for layer_id, item in enumerate(graph.layer_list):
+            layer = graph.layer_list[layer_id]
+            layer_information = layer_description_extractor(
+                layer, graph.node_to_id)
+            layer_list.append((layer_id, layer_information))","layer_list = [(layer_id, layer_description_extractor(
+                graph.layer_list[layer_id], graph.node_to_id)) for (layer_id, item) in enumerate(graph.layer_list)]"
+12,"should_delete = False
+        should_create = False
+        should_update = False",should_delete = should_create = should_update = False
+13,if self._content_length == 0:,if !self._content_length:
+13,if result is not None:,if result:
+13,"if (
+                    item_type in FIELD_TYPES
+                    and settings.DATA_UPLOAD_MAX_NUMBER_FIELDS is not None
+                ):","if (
+                    item_type in FIELD_TYPES
+                    and settings.DATA_UPLOAD_MAX_NUMBER_FIELDS
+                ):"
+13,if transfer_encoding is not None:,if transfer_encoding:
+13,if settings.DATA_UPLOAD_MAX_MEMORY_SIZE is not None:,if settings.DATA_UPLOAD_MAX_MEMORY_SIZE:
+13,"if (
+                        settings.DATA_UPLOAD_MAX_MEMORY_SIZE is not None
+                        and num_bytes_read > settings.DATA_UPLOAD_MAX_MEMORY_SIZE
+                    ):","if (
+                        settings.DATA_UPLOAD_MAX_MEMORY_SIZE
+                        and num_bytes_read > settings.DATA_UPLOAD_MAX_MEMORY_SIZE
+                    ):"
+13,if chunk is None:,if not chunk:
+14,"self.project = project_data['project']
+        self.project_data = project_data
+        self.auth_api = common_actions.create_project_auth(project = self.project, session = self.session)
+        self.member = self.auth_api.member","self.project,self.project_data,self.auth_api = project_data['project'],project_data,common_actions.create_project_auth(project = self.project_data['project'], session = self.session)"
+15,"nn.Conv2d(mlp_spec[k], mlp_spec[k + 1], kernel_size=1, bias=False),","nn.Conv2d(*mlp_spec[k:k+2],  kernel_size=1, bias=False),"
+16,msg = "Creating csv lists in  %s..." % (csv_file),msg = f"Creating csv lists in  {csv_file}..."
+16,msg = "%s successfully created!" % (csv_file),msg = f"{csv_file} successfully created!"
+17,"f = open(self.getMainVBAFile()+"".vbs"")
+        vbsContent = f.read()
+        f.close()","with open(self.getMainVBAFile()+"".vbs"") as f:
+            vbsContent = f.read()"
+17,"f = open(self.outputFilePath, 'w')
+        f.writelines(wsfContent)
+        f.close()","with open(self.outputFilePath, 'w') as f:
+           f.writelines(wsfContent)"
+18,"roles = set()
+            for permission in permissions:
+                for role in permission.roles:
+                    roles.add(role)",roles = {role for role in permission.roles for permission in permissions}
+18,"result_set = set()
+            for role in roles:
+                role_permissions = set(
+                    [p.name for p in role.permissions])
+                if permission_set.issubset(role_permissions):
+                    result_set.add(role)",result_set = {role for role in roles if permission_set.issubset({p.name for p in role.permissions})}
+19,"output = {}
+                for k, v in dictionary.items():
+                    if isinstance(v, torch.Tensor):
+                        output[k] = v.to(device)
+                    else:
+                        output[k] = v","output = {k:v.to(device) if isinstance(v, torch.Tensor) else k:v  for k, v in dictionary.items()}"
+20,"(k+1) % args.render_every == 0 
+","not (k+1) % args.render_every 
+  "
+20,if (k + 1) % args.save_every == 0 and args.train:,if not (k + 1) % args.save_every and args.train:
+21,"smell_range = self.board[""_smell_range""]
+        agent_pos = self.internal_state.agent_pos","smell_range,agent_pos = self.board[""_smell_range""],self.internal_state.agent_pos"
+21,"smell_x = agent_pos.x + x
+                smell_y = agent_pos.y + y","smell_x,smell_y = agent_pos.x + x,agent_pos.y + y"
+22,,
+23,"b64 = base64.b64encode(open(image_filename, ""rb"").read()).decode('utf-8')","with open(image_filename, ""rb"") as f:
+	b64 = base64.b64encode(f.read()).decode('utf-8')"
+24,default = ['default = %s' % fmt_value(field.default_value)],default = [f'default = {fmt_value(field.default_value)]}'
+24,default = ['default = "%s"' % field.default_value],default = ['default = "{field.default_value}"']
+24,default = ['default = %s' % field.default_value],default = ['default = {field.default_value}']
+24,"if out.startswith('map<'):
+        line = out + ' %s = %s;\n' % (field.name, fmt_value(field.number, field.options, optarr=default))
+        out = ''
+    elif field.type != field.TYPE_GROUP:
+        line = '%s %s %s = %s;\n' % (labels[field.label], type_, field.name, fmt_value(field.number, field.options, optarr=default))
+    else:
+        line = '%s group %s = %d ' % (labels[field.label], type_, field.number)","if out.startswith('map<'):
+        line = out + f' {field.name} = {fmt_value(field.number, field.options, optarr=default)};\n'
+        out = ''
+    elif field.type != field.TYPE_GROUP:
+        line = f'{labels[field.label]} {type_} {field.name} = {fmt_value(field.number, field.options, optarr=default)};\n'
+    else:
+        line = '{labels[field.label]} group {type_} = {field.number} '"
+24,"blocks.setdefault('_oneof_%d' % field.oneof_index, '')","blocks.setdefault(f'_oneof_{field.oneof_index}', '')"
+24,blocks['_oneof_%d' % field.oneof_index] += line + out,blocks['_oneof_{field.oneof_index]}'+= line + out

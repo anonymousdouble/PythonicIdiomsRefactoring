@@ -1,0 +1,156 @@
+1,"for i in range(0, len(minibatch)): 
+     terminal = minibatch[i][4] 
+     if terminal: 
+         y_batch.append(r_batch[i]) 
+     else: 
+         y_batch.append(r_batch[i] + GAMMA * np.max(readout_j1_batch[i]))","y_batch = [r_batch[i] if minibatch[i][4] else r_batch[i] + GAMMA * np.max(readout_j1_batch[i]) for i in range(0, len(minibatch))]"
+2,"for uv_set in settings.selection_uv_loops: 
+     for loop in bm.faces[uv_set[0]].loops: 
+         if loop.vert.index == uv_set[1]: 
+             loop[uv_layers].select = True 
+             break",
+3,G_ego.number_of_nodes() >= 50 and G_ego.number_of_nodes() <= 400,50 <= G_ego.number_of_nodes() <= 400
+3,G_ego.number_of_nodes() >= 4 and G_ego.number_of_nodes() <= 20,4 <= G_ego.number_of_nodes() <= 20
+4,"for children in resource_hierarchy.values(): 
+     if parent in children: 
+         is_root = False 
+         break 
+ if is_root: 
+     root = parent","for children in resource_hierarchy.values(): 
+     if parent in children: 
+         break 
+ else: 
+     root = parent"
+5,"for user in privileged_users: 
+     manager = user['managers_group__user'] 
+     last_login = user['managers_group__user__last_login'] 
+     if last_login: 
+         if last_login + relativedelta(months=months) > start_of_today: 
+             active_managers.add(manager)",active_managers = {user['managers_group__user'] for user in privileged_users if user['managers_group__user__last_login'] if user['managers_group__user__last_login'] + relativedelta(months=months) > start_of_today}
+6,trust_oids != empty_set and any_purpose not in trust_oids and (win_server_auth not in trust_oids),any_purpose not in trust_oids != empty_set and win_server_auth not in trust_oids
+6,trust_oids != empty_set and any_purpose not in trust_oids and (apple_ssl not in trust_oids),any_purpose not in trust_oids != empty_set and apple_ssl not in trust_oids
+7,"self.full_csv_path = '' 
+ self.dir = '' 
+ self.filename = ''",
+7,"self.csv = None 
+ self.bokeh_source = None 
+ self.bokeh_source_orig = None 
+ self.last_modified = None","self.csv, self.bokeh_source, self.bokeh_source_orig, self.last_modified = None"
+7,"self.separate_files = False 
+ self.last_reload_data_fix = False","self.separate_files, self.last_reload_data_fix = False"
+8,"for row in frontable: 
+     content += '{}{}{}'.format(row[0], row[1], row[2])",
+8,"for row in takeovers: 
+     content += '{}{}{}'.format(row[0], row[1], row[2])",
+8,"for row in subdomains: 
+     content += '{}{}{}'.format(row[0], row[1], row[2])",
+9,"is_bad = False 
+ while start < len(chars): 
+     end = len(chars) 
+     cur_substr = None 
+     while start < end: 
+         substr = ''.join(chars[start:end]) 
+         if start > 0: 
+             substr = '##' + six.ensure_str(substr) 
+         if substr in self.vocab: 
+             cur_substr = substr 
+             break 
+         end -= 1 
+     if cur_substr is None: 
+         is_bad = True 
+         break 
+     sub_tokens.append(cur_substr) 
+     start = end 
+ if is_bad: 
+     output_tokens.append(self.unk_token) 
+ else: 
+     output_tokens.extend(sub_tokens)",
+9,"cur_substr = None 
+ while start < end: 
+     substr = ''.join(chars[start:end]) 
+     if start > 0: 
+         substr = '##' + six.ensure_str(substr) 
+     if substr in self.vocab: 
+         cur_substr = substr 
+         break 
+     end -= 1 
+ if cur_substr is None: 
+     is_bad = True 
+     break","while start < end: 
+     substr = ''.join(chars[start:end]) 
+     if start > 0: 
+         substr = '##' + six.ensure_str(substr) 
+     if substr in self.vocab: 
+         cur_substr = substr 
+         break 
+     end -= 1 
+ else: 
+     is_bad = True 
+     break"
+10,"specific_person.shape[0], specific_person.shape[1], specific_person.shape[2]",*specific_person.shape[:3]
+10,"img_a.shape[0], img_a.shape[1], img_a.shape[2]",*img_a.shape[:3]
+11,"type_pairs = [] 
+ for item in graph.operation_history: 
+     if item[0] == 'to_deeper_model': 
+         operation_history.append([item[0], item[1], layer_description_extractor(item[2], graph.node_to_id)]) 
+     else: 
+         operation_history.append(item)","operation_history = [[item[0], item[1], layer_description_extractor(item[2], graph.node_to_id)] if item[0] == 'to_deeper_model' else item for item in graph.operation_history]"
+11,"for node in graph.node_list: 
+     node_id = graph.node_to_id[node] 
+     node_information = node.shape 
+     node_list.append((node_id, node_information))","node_list = [(graph.node_to_id[node], node.shape) for node in graph.node_list]"
+11,"for (layer_id, item) in enumerate(graph.layer_list): 
+     layer = graph.layer_list[layer_id] 
+     layer_information = layer_description_extractor(layer, graph.node_to_id) 
+     layer_list.append((layer_id, layer_information))","layer_list = [(layer_id, layer_description_extractor(graph.layer_list[layer_id], graph.node_to_id)) for (layer_id, item) in enumerate(graph.layer_list)]"
+12,"should_delete = False 
+ should_create = False 
+ should_update = False",
+13,self._content_length == 0,
+13,remaining != 0,
+14,"self.project = project_data['project'] 
+ self.project_data = project_data",
+15,"mlp_spec[k], mlp_spec[k + 1]",
+16,'Creating csv lists in  %s...' % csv_file,f'Creating csv lists in  {csv_file}...'
+16,'%s successfully created!' % csv_file,f'{csv_file} successfully created!'
+17,f = open(self.getMainVBAFile() + '.vbs'),with open(self.getMainVBAFile() + '.vbs') as f:
+17,"f = open(self.outputFilePath, 'w')","with open(self.outputFilePath, 'w') as f:"
+18,"for permission in permissions: 
+     for role in permission.roles: 
+         roles.add(role)",
+18,"for role in roles: 
+     role_permissions = set([p.name for p in role.permissions]) 
+     if permission_set.issubset(role_permissions): 
+         result_set.add(role)",result_set = {role for role in roles if permission_set.issubset(set([p.name for p in role.permissions]))}
+19,"for (k, v) in dictionary.items(): 
+     if isinstance(v, torch.Tensor): 
+         output[k] = v.to(device) 
+     else: 
+         output[k] = v",
+20,(k+1) % args.render_every == 0,(k + 1) % args.save_every == 0
+21,"smell_range = self.board['_smell_range'] 
+ agent_pos = self.internal_state.agent_pos","smell_range , agent_pos  = self.board['_smell_range'], self.internal_state.agent_pos"
+21,"smell_x = agent_pos.x + x 
+ smell_y = agent_pos.y + y","smell_x , smell_y  = agent_pos.x + x, agent_pos.y + y"
+22,"for (role_id, point_id) in pointsnew.items(): 
+     role_name = resolve_value('roles', role_id) 
+     points[role_name] = [None, resolve_value('points', point_id)]","points = {resolve_value('roles', role_id): [None, resolve_value('points', point_id)] for (role_id, point_id) in pointsnew.items()}"
+22,"for (role_id, point_id) in pointsnew.items(): 
+     role_name = resolve_value('roles', role_id) 
+     oldpoint_id = pointsold.get(role_id, None) 
+     points[role_name] = [resolve_value('points', oldpoint_id), resolve_value('points', point_id)]","points.update({resolve_value('roles', role_id): [resolve_value('points', pointsold.get(role_id, None)), resolve_value('points', point_id)] for (role_id, point_id) in pointsnew.items()})"
+23,"b64 = base64.b64encode(open(image_filename, 'rb').read()).decode('utf-8') 
+ step['screenshot'] = b64","with open(image_filename, 'rb') as f: 
+     b64 = base64.b64encode(f.read()).decode('utf-8') 
+     step['screenshot'] = b64"
+24,'default = %s' % fmt_value(field.default_value),f'default = {fmt_value(field.default_value)}
+24,'default = "%s"' % field.default_value,f'default = "{field.default_value}"'
+24,'default = %s' % field.default_value,f'default = {field.default_value}'
+24,"' %s = %s;
+' % (field.name, fmt_value(field.number, field.options, optarr=default))","f'{field.name} = {fmt_value(field.number, field.options, optarr=default)};
+'"
+24,"'%s %s %s = %s;
+' % (labels[field.label], type_, field.name, fmt_value(field.number, field.options, optarr=default))",
+24,"'%s group %s = %d ' % (labels[field.label], type_, field.number)",
+24,'_oneof_%d' % field.oneof_index,
+24,'_oneof_%d' % field.oneof_index,
